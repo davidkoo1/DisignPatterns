@@ -1,0 +1,16 @@
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\bin\Debug\net5.0\BuilderPattern.exe
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\bin\Debug\net5.0\BuilderPattern.deps.json
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\bin\Debug\net5.0\BuilderPattern.runtimeconfig.json
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\bin\Debug\net5.0\BuilderPattern.runtimeconfig.dev.json
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\bin\Debug\net5.0\BuilderPattern.dll
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\bin\Debug\net5.0\BuilderPattern.pdb
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\obj\Debug\net5.0\BuilderPattern.csproj.AssemblyReference.cache
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\obj\Debug\net5.0\BuilderPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\obj\Debug\net5.0\BuilderPattern.AssemblyInfoInputs.cache
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\obj\Debug\net5.0\BuilderPattern.AssemblyInfo.cs
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\obj\Debug\net5.0\BuilderPattern.csproj.CoreCompileInputs.cache
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\obj\Debug\net5.0\BuilderPattern.dll
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\obj\Debug\net5.0\ref\BuilderPattern.dll
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\obj\Debug\net5.0\BuilderPattern.pdb
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\obj\Debug\net5.0\BuilderPattern.genruntimeconfig.cache
+C:\Users\sverc\OneDrive\Рабочий стол\BuilderPattern\BuilderPattern\obj\Debug\net5.0\refint\BuilderPattern.dll
