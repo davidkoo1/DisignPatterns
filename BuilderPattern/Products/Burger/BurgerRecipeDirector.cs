@@ -1,4 +1,4 @@
-﻿namespace BuilderPattern
+﻿namespace BuilderPattern.Products.Burger
 {
     public class BurgerRecipeDirector
     {

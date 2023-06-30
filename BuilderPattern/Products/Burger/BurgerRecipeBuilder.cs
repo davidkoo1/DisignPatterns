@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 //Задействованные ингредиенты + *цена на каждый
 //общая цена на бургер
 //общая цена заказа
-namespace BuilderPattern
+namespace BuilderPattern.Products.Burger
 {
     public class BurgerRecipeBuilder : IBurgerRecipeBuilder
     {
@@ -23,8 +23,7 @@ namespace BuilderPattern
         public IBurgerRecipeBuilder BurgerName()
         {
             Console.WriteLine("Write new name burger");
-            _burgerRecipe.BurgerName = Console.ReadLine();
-            _burgerRecipe.BurgerName += "\n-----------------------------------------------------------------------------------\n";
+            _burgerRecipe.Name = Console.ReadLine();
 
             return this;
         }
@@ -63,8 +62,8 @@ namespace BuilderPattern
 
         public IBurgerRecipeBuilder TotalPrice()
         {
-            _burgerRecipe.Price = "\n-----------------------------------------------------------------------------------\n";
-            _burgerRecipe.Price += $"\nTOTAL PRICE: {_burgerRecipe.Ingredients.Sum(x => x.IngredientsPrice)}$";
+            _burgerRecipe.GetPrice();
+
 
             return this;
         }

@@ -1,8 +1,9 @@
-﻿namespace BuilderPattern
+﻿namespace BuilderPattern.Products.Burger
 {
     public interface IBurgerRecipeBuilder
     {
         IBurgerRecipeBuilder BurgerName();
+
         IBurgerRecipeBuilder WithCheese();
 
         IBurgerRecipeBuilder WithBacon();
