@@ -30,7 +30,7 @@ namespace BuilderPattern
 
         public IOrderBuilder BuildBody()
         {
-            _order.Body = "Orders: \n";
+            _order.Body = "\t\t\tORDERS:\n";
             _order.Body += string.Join(Environment.NewLine, _orders.Select(x => $"{x.ToString()}"));
 
             return this;
