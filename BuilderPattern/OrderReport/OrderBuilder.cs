@@ -1,22 +1,28 @@
 ﻿using BuilderPattern.Products;
+using BuilderPattern.Strategies;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace BuilderPattern
 {
     public class OrderBuilder : IOrderBuilder
     {
+
+        private IOrder _orderPlace;
+
         private Order _order; //Отчет который получим
 
         private readonly IEnumerable<IOrderItem> _orders;//Список заказов, которые получим в конструкторе
 
-        public OrderBuilder(IEnumerable<IOrderItem> orders)
+        public OrderBuilder(IEnumerable<IOrderItem> orders, IOrder orderPlace)
         {
             _orders = orders;
             _order = new();
+            _orderPlace = orderPlace;
         }
 
         public IOrderBuilder BuildHeader()
@@ -42,6 +48,23 @@ namespace BuilderPattern
             _order.Footer += $"\nTOTAL PRICE: {_orders.Sum(x => x.GetPrice())}$";
 
             return this;
+        }
+
+        public void SelectPlace()
+        {
+            Console.WriteLine(">>>");
+
+            if (_orderPlace is null)
+            {
+                Console.WriteLine($"This order can't have user. Set orderPlace.");
+                return;
+            }
+
+            Console.WriteLine("Thanks for order in CoffeClub!");
+
+            _orderPlace.OrderPlace();
+
+            Console.WriteLine("Don't forget to pay for the order <з");
         }
 
         public Order GetOrder()

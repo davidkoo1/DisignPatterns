@@ -5,6 +5,7 @@
 
 using BuilderPattern.Factories;
 using BuilderPattern.Products;
+using BuilderPattern.Strategies;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,8 +46,23 @@ namespace BuilderPattern
                     orders.Add(order);
                 }
             }
+            IOrder orderPlace = null;
+            while (true)
+            {
+                Console.WriteLine("Select where you want see you order");
+                Console.WriteLine("\t> W - With You");
+                Console.WriteLine("\t> S - Stay in coffeClub");
 
-            var builder = new OrderBuilder(orders);
+                string selectOrderPlace = Console.ReadLine().ToLower();
+
+                if(selectOrderPlace == "w" || selectOrderPlace == "s")
+                {
+                    orderPlace = GetOrderPlace(selectOrderPlace);
+                    break;
+                }
+            }
+
+            var builder = new OrderBuilder(orders, orderPlace);
 
             var director = new OrderDirector(builder);
 
@@ -55,6 +71,8 @@ namespace BuilderPattern
             var report = builder.GetOrder();
 
             Console.WriteLine(report);
+
+            builder.SelectPlace();
         }
 
         private static OrderItemFactory GetFactory(string orderType) =>
@@ -64,6 +82,14 @@ namespace BuilderPattern
                 "d" => new DrinkFactory(),
                 "f" => new FrenchFriesFactory(10m, "Hot potate"),
                 "*" => new DopingFactory(),
+                _ => null
+            };
+
+        private static IOrder GetOrderPlace(string orderPlace) =>
+            orderPlace.ToLower() switch
+            {
+                "w" => new WithUser(),
+                "s" => new InCoffeClub(),
                 _ => null
             };
     

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BuilderPattern.Strategies;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace BuilderPattern
         public OrderDirector(IOrderBuilder builder)
         {
             _builder = builder;
+
         }
 
         public void Build()
@@ -20,6 +22,7 @@ namespace BuilderPattern
             _builder.BuildHeader()
                 .BuildBody()
                 .BuildFooter();
+
         }
     }
 }
